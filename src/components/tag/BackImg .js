@@ -18,16 +18,17 @@ export default class BackImg extends React.Component {
     }
 
     render() {
-        console.log(this.props.res);
 
+if(!this.state.img)
+return null;
         var r=[];
         r=this.state.img;
         console.log(this.state.img);
-        return (
+        return(
             <div>
-            <img src={r.link} alt="" width="120px" height="130px"/>
+                         <img src={r.link} alt="" id="back_img" width="127px" height="20px"/> 
+
             </div>
-    
-        )
+        )   
         }
 }
