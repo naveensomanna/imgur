@@ -8,6 +8,7 @@ position: relative;
 display: inline-flex;
 flex-wrap: wrap;
 margin-right: 10px;
+margin-bottom:15px;
 box-sizing: border-box;
 max-height: 350px;
 }

@@ -1,13 +1,22 @@
 import React from 'react';
 import './header.css';
+import {NavLink} from 'react-router-dom';
+import axios from 'axios'; 
 export default class Header extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            q:''
+        }
+    }
+   
     render() {
         return (
             <div>
                 <div className="header_main">
                     <div className="header_name">
                         <div className="header_logo">
-                            <img src="https://s.imgur.com/desktop-assets/desktop-assets/Navbar-logo.bcf646386406b43008da913e901b916d.svg" alt="" />
+                    <NavLink to="/"><img src="https://s.imgur.com/desktop-assets/desktop-assets/Navbar-logo.bcf646386406b43008da913e901b916d.svg" alt="" /></NavLink>
                         </div>
 
                         <a href="" className="ButtonLink" title="New post">

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 export default class BackImg extends React.Component {
     constructor(props) {
@@ -10,25 +11,23 @@ export default class BackImg extends React.Component {
     componentDidMount() {
 
         axios.get(`https://api.imgur.com/3/image/${this.props.res}?client_id=5d692219f4e58cd`).then(response => {
-            this.setState
-                ({
+            this.setState({
                     img: response.data.data
                 })
         })
     }
 
     render() {
-
-if(!this.state.img)
-return null;
-        var r=[];
-        r=this.state.img;
-        console.log(this.state.img);
+       
         return(
             <div>
-                         <img src={r.link} alt="" id="back_img" width="127px" height="20px"/> 
+                         <img src={this.state.img.link} alt="" id="back_img" width="127px" height="20px"/> 
 
             </div>
         )   
         }
+}
+
+BackImg.propTypes={
+    res:PropTypes.string.isRequired
 }

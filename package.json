@@ -5,12 +5,14 @@
   "dependencies": {
     "axios": "^0.18.0",
     "halogen": "^0.2.0",
+    "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-loader": "^2.4.5",
     "react-md-spinner": "^0.2.5",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "yarn": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
