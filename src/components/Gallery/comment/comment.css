@@ -16,3 +16,8 @@ ul{
 	padding: 0; 
 	height: 45px;
 }
+.author{
+	font-size: 11px;
+	margin-bottom: 4px;
+	color:#bbb;
+}

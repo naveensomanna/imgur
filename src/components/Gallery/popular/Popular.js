@@ -1,32 +1,41 @@
 import React from 'react';
 import axios from 'axios';
+import './popular.css';
+import {Link} from 'react-router-dom';
+import Loader from 'react-loader';
 
-const url = 'https://api.imgur.com/3/gallery/hot/time/0?showViral=true&album_previews=true&client_id=5d692219f4e58cd';
-
-export default class New extends React.Component {
+const url = 'https://api.imgur.com/3/gallery/hot/viral/0?showViral=true&client_id=5d692219f4e58cd';
+export default class Popular extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            popular: []
+            popular: [],
+            loaded: false
         }
     }
     componentDidMount() {
         axios.get(url).then(response => {
             this.setState({
-                    popular: response.data.data
-                })
+                    popular: response.data.data,
+                    loaded: true
+                });
         })
     }
 
     render() {
-        let result = this.state.popular.map((el, id) => {
+        var options = {
+            color: "orange"
+        }
 
-            return (
-                <div className="grid_column" key={id}>
-                        <a href="" id="grid_inner" >
+            var result = this.state.popular.map((el, id) => {
+                
+                return (
+                    <div id="grid_column" key={id}>
+                    <Link to={`/gallery/${el.id}`} >
                             <div className="post_item_media">
-                                <img src={el.images ? el.images[0].link : null} ref={img=>this.img=img} onError={()=>this.img.src="http://i.imgur.com/lL3LtFD.jpg"} alt=" " height="250px" width="260px" />
+                                <img src={el.images?el.images[0].link: null}  alt=" "/>
                             </div>
+                            
                             <div id="post-item-title_wrap">
                                 <div className="post_title">
                                     <p>{el.title}</p>
@@ -45,15 +54,22 @@ export default class New extends React.Component {
                                         <p className="inner_icons"><i className="fas fa-eye"></i>{el.views}</p>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                             </div>
+                         
+
+                    </Link>
                     </div>
-            )
-        })
+                )
+            
+           
+            });
+        
+
         return (
             <div className="home_grid">
-                {result}
-            
+                <Loader loaded={this.state.loaded} options={options}>
+                    {result}
+                </Loader>
             </div>
         )
     }

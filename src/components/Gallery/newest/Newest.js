@@ -1,40 +1,31 @@
 import React from 'react';
 import axios from 'axios';
-import './popular.css';
-import {Link} from 'react-router-dom';
-import Loader from 'react-loader';
 
-const url = 'https://api.imgur.com/3/gallery/hot/viral?showViral=true&album_previews=true&client_id=5d692219f4e58cd';
-export default class Popular extends React.Component {
+const url = 'https://api.imgur.com/3/gallery/hot/time/?showViral=true&album_previews=true&client_id=5d692219f4e58cd';
+
+export default class Neweset extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            popular: [],
-            loaded: false
+            popular: []
         }
     }
     componentDidMount() {
         axios.get(url).then(response => {
             this.setState({
-                    popular: response.data.data,
-                    loaded: true
-                });
+                    popular: response.data.data
+                })
         })
     }
 
     render() {
-        var options = {
-            color: "orange"
-        }
+        let result = this.state.popular.map((el, id) => {
 
-            var result = this.state.popular.map((el, id) => {
-                
-                return (
-                    <div className="grid_column" key={id}>
-                      <Link to={`/gallery/${el.id}`}> 
-                       <a href="" id="grid_inner" >
+            return (
+                <div id="grid_column" key={id}>
+                        <a href="" id="grid_inner" >
                             <div className="post_item_media">
-                                <img src={el.images ? el.images[0].link : null} ref={img=>this.img=img}  alt=" " height="250px" width="260px" />
+                                <img src={el.images ? el.images[0].link : null} ref={img=>this.img=img} onError={()=>this.img.src="http://i.imgur.com/lL3LtFD.jpg"} alt=" " height="250px" width="260px" />
                             </div>
                             <div id="post-item-title_wrap">
                                 <div className="post_title">
@@ -56,19 +47,13 @@ export default class Popular extends React.Component {
                                 </div>
                             </div>
                         </a>
-                        </Link>
                     </div>
-                )
-            
-           
-            });
-        
-
+            )
+        })
         return (
             <div className="home_grid">
-                <Loader loaded={this.state.loaded} options={options}>
-                    {result}
-                </Loader>
+                {result}
+            
             </div>
         )
     }

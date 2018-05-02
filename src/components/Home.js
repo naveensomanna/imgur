@@ -1,6 +1,6 @@
 import React from 'react';
-import Popular from './Gallery/Popular';
-import New from './Gallery/New';
+import Popular from './Gallery/popular/Popular';
+import New from './Gallery/newest/Newest';
 import Tags from './tag/Tags';
 import Header from './Header/Header';
 
@@ -26,7 +26,6 @@ export default class Home extends React.Component {
         return (
             <div style={{ backgroundImage: `url(${img})`, height: '450px', backgroundSize: 'cover' }}>
                     <Header />
-
                 <div style={{ textAlign: 'center', marginTop: '12px', minHeight: '34px', color: '#aed8ea', letterSpacing: '.6px', fontSize: '20px', fontWeight: '600' }}>{res}</div>
                 <div>
                     <Tags/>

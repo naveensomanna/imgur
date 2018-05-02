@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Home from './components/Home';
-import Allbum from './components/Gallery/Allbum';
+import Allbum from './components/Gallery/allbum/Allbum';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 
 class App extends Component {
