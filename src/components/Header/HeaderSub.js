@@ -91,9 +91,9 @@ class HoverOnAccount extends React.Component{
     return (
 
 <div className="dropurl">
-<li>images</li>
+<li><NavLink exact to="/user/all" style={{color:'#121211'}}>images</NavLink></li>
 <li>allbums</li>
-<li><NavLink exact to="/user">gallery profile</NavLink></li>
+<li><NavLink exact to="/user/Naveensomanna" style={{color:'#121211'}}>gallery profile</NavLink></li>
 <li>favorites</li>
 <li>messages</li>
 <li><a className="a">settings</a><a className="a">sign out</a></li>

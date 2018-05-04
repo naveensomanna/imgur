@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Comment from '../comment/Comment';
 import PopularSub from '../popularsub/PopularSub.js';
-import  {Route} from 'react-router-dom';
 import './allbum.css';
 import HeaderSub from '../../Header/HeaderSub.js';
 
@@ -31,7 +30,6 @@ export default class Allbum extends React.Component {
     }
     render() {
         var arr = [];
-        var desc=[]
         var res;
         if (this.state.allbum.images) {
             for (var i = 0; i < this.state.allbum.images.length; i++) {

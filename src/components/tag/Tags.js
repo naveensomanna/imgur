@@ -3,7 +3,6 @@ import axios from 'axios';
 import BackImg from './BackImg ';
 import './tag.css';
 import Loader from 'react-loader';
-import {Link} from 'react-router-dom';
 const url = 'https://api.imgur.com/3/tags?client_id=5d692219f4e58cd';
 
 export default class Tags extends React.Component {
@@ -78,7 +77,7 @@ export default class Tags extends React.Component {
                         <span>Explore Tags</span>
                     </div>
                     <div className="label_toggle">
-                        <a href="" onClick={this.handleClick} ref={(node) => { this.myref = node }}>{!this.state.status ? this.state.val : "LESS TAGS"}</a>
+                        <a href="" onClick={this.handleClick} ref={(node) => { this.myref = node }}>{!this.state.status ? this.state.val : "LESS TAGS -"}</a>
                     </div>
                 </div>
                 <Loader loaded={this.state.loaded} options={options}>

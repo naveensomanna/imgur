@@ -1,15 +1,10 @@
 import React from 'react';
 import './header.css';
 import {NavLink} from 'react-router-dom';
-import axios from 'axios'; 
+import Search from './Search.js';
+import Account from '../Account/Account.js';
 export default class Header extends React.Component {
-    constructor(props){
-        super(props);
-        this.state={
-            q:''
-        }
-    }
-   
+    
     render() {
         return (
             <div>
@@ -25,20 +20,18 @@ export default class Header extends React.Component {
                         </a>
                     </div>
                     <div className="header_search">
-                        <form id="search_form">
-                            <input type="text" placeholder="Images, #tags, @users oh my!" id="search"/>
-                        </form>
+                       <Search/>
                     </div>
                     <div className="header_right">
                     <div className="right_wrapper">                   
                          <div className="header_icon">
-                    <a href=""><img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-leaderboard.99437df2b52eceb16428afa3c5ae40c1.svg" alt="" /></a>
+                    <a href="">
+                    <img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-leaderboard.99437df2b52eceb16428afa3c5ae40c1.svg" alt="" /></a>
                         <a href=""><img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-chat.951724718c8a2113148427d8aaba480a.svg" alt="" /></a>
-
                         <a href=""><img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-notifications.6a14dca2fac0255d147c87f73d2ceed3.svg" alt="" /></a>
                         </div>
-                        <div>
-                            <img src="https://i.imgur.com/8jRAi2S_d.png?maxwidth=155&fidelity=grand" alt="" width="50px" height="50px" style={{borderRadius:'50%'}}/>
+                     <div className="avatar_header">
+                        <Account/>
                             </div>    
                     </div>
                 </div>

@@ -1,0 +1,44 @@
+#avtar a{
+	text-decoration: none;
+	overflow: hidden;
+	position: relative;
+}
+#avatar{
+	position: relative;
+}
+#avatar img{
+	width:40px;
+	height: 40px;
+	border-radius: 50%;
+}
+#setting_main{
+	position: fixed;
+	right:6px;
+	line-height: 2.13;
+	letter-spacing: .8px;
+box-shadow: 0 9px 25px 0 rgba(0,0,0,.78);
+z-index:1;
+background-color: #53565d;
+border-radius: 6px;
+box-sizing: border-box;
+height:280px;
+min-width: 150px;
+
+}
+#setting_main ul{
+list-style-type: none;
+padding-left: 21px;
+padding-right: 10px;
+margin: 0;
+}
+#setting_main ul li a{
+	text-decoration: none;
+color: #b4b9c2;
+cursor: pointer;
+display: block;
+letter-spacing: 1px;
+width: auto;
+text-align: left;
+white-space: nowrap;
+color:#f2f2f2;
+}

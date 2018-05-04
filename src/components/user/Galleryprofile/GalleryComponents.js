@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Footer from './Footer.js';
 import './gallerycomponent.css';
 
 const url = 'https://api.imgur.com/3/gallery/hot/viral/0?showViral=true&client_id=5d692219f4e58cd';
@@ -121,28 +122,4 @@ return(
 </div>
 </div>
 )
-}
-const Footer=()=>{
-return(
-<div id="footer">
-<div id="footer-links">
-<a href="">Love Imgur?join our team</a>.
-<a href="">about</a>.
-<a href="">story</a>.
-<a href="">help</a>.
-<a href="">blog</a>.
-<a href="">request deletion</a>.
-<a href="">form</a>.
-<a href="">terms</a>.
-<a href="">privacy</a>.
-<a href="">apps</a>.
-<a href="">api</a>.
-<a href="">advertise</a>.
-<a href="">ad choices</a>
-
-</div>
-<div className="copyright">&copy; 2018 Imgur,Inc.</div>
-</div>
-)
-
 }

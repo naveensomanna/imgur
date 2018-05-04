@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import './popularsub.css';
-import {Link} from 'react-router-dom';
 
 const url = 'https://api.imgur.com/3/gallery/hot/viral/0?client_id=5d692219f4e58cd';
 export default class PopularSub extends React.Component {
