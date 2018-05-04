@@ -86,16 +86,19 @@ return(
 </div>
 		);
 }
-const HoverOnAccount=()=>{
+class HoverOnAccount extends React.Component{
+	render(){
     return (
+
 <div className="dropurl">
 <li>images</li>
 <li>allbums</li>
-<li>gallery profile</li>
+<li><NavLink exact to="/user">gallery profile</NavLink></li>
 <li>favorites</li>
 <li>messages</li>
 <li><a className="a">settings</a><a className="a">sign out</a></li>
 </div>
 
     )
+}
 }

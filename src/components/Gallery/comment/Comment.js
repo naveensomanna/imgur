@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {Collapse,Well,Button} from 'react-bootstrap';
 import './comment.css';
 
 export default class Comment extends React.Component{
@@ -67,18 +68,47 @@ var res=this.state.comment.map(el=>{
 {el.comment}
 </div>
 </li>
-<a href="" onClick={this.handleclick}>{el.children.length>1?el.children.length +"replies":el.children.length+'reply'}</a>
-{this.state.load?res1:null}
 </div>
-
 		)
 });
-console.log(res1);
+
 		return(
 <div>
 <ul>{res}
+<Example/>
+
 </ul>
 </div>
 			);
 	}
+}
+
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      open: false
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <Button onClick={() => this.setState({ open: !this.state.open })}>
+          click
+        </Button>
+        <Collapse in={this.state.open}>
+          <div>
+            <Well>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. Nihil anim keffiyeh
+              helvetica, craft beer labore wes anderson cred nesciunt sapiente
+              ea proident.
+            </Well>
+          </div>
+        </Collapse>
+      </div>
+    );
+  }
 }

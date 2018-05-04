@@ -2,8 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import Comment from '../comment/Comment';
 import PopularSub from '../popularsub/PopularSub.js';
-import HeaderSub from '../../Header/HeaderSub';
+import  {Route} from 'react-router-dom';
 import './allbum.css';
+import HeaderSub from '../../Header/HeaderSub.js';
+
 export default class Allbum extends React.Component {
     constructor(props) {
         super(props);
@@ -52,7 +54,8 @@ export default class Allbum extends React.Component {
         });
         return ( 
         <div>
-            <HeaderSub/>
+        <HeaderSub/>
+
 <div className="wrapper">
             <div className = "post_container" >
 

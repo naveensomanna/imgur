@@ -21,7 +21,7 @@ export default class Home extends React.Component {
         })
     }
     render() {
-        var arr=['The center of a donut is 100% fat free.','On the internet, nobody knows you"re a dog"'];
+        var arr=['The center of a donut is 100% fat free.','Never be bored again.','On the internet, nobody knows you"re a dog"'];
         var res=arr[Math.floor(arr.length* Math.random())];
         return (
             <div style={{ backgroundImage: `url(${img})`, height: '450px', backgroundSize: 'cover' }}>
