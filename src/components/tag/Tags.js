@@ -3,7 +3,7 @@ import axios from 'axios';
 import BackImg from './BackImg ';
 import './tag.css';
 import Loader from 'react-loader';
-const url = 'https://api.imgur.com/3/tags?client_id=5d692219f4e58cd';
+                                        const url = 'https://api.imgur.com/3/tags?client_id=5d692219f4e58cd';
 
 export default class Tags extends React.Component {
     constructor(props) {
@@ -33,8 +33,8 @@ export default class Tags extends React.Component {
 
     }
     render() {
-
         let result = this.state.tags.slice(0, 8).map((el, id) => {
+
             return (
                 <div className="tag" key={id}>
         
@@ -74,10 +74,10 @@ export default class Tags extends React.Component {
             <div className="trending">
                 <div className="trendingtags-header">
                     <div className="trendingtags_label">
-                        <span>Explore Tags</span>
+                        <h3>Explore Tags</h3>
                     </div>
                     <div className="label_toggle">
-                        <a href="" onClick={this.handleClick} ref={(node) => { this.myref = node }}>{!this.state.status ? this.state.val : "LESS TAGS -"}</a>
+                       <h3><a href="" onClick={this.handleClick} ref={(node) => { this.myref = node }}>{!this.state.status ? this.state.val : "LESS TAGS -"}</a></h3>
                     </div>
                 </div>
                 <Loader loaded={this.state.loaded} options={options}>

@@ -12,8 +12,9 @@
 	border-radius: 50%;
 }
 #setting_main{
-	position: fixed;
-	right:6px;
+	position: absolute;
+	top:60px;
+	right:-9px;
 	line-height: 2.13;
 	letter-spacing: .8px;
 box-shadow: 0 9px 25px 0 rgba(0,0,0,.78);
@@ -41,4 +42,12 @@ width: auto;
 text-align: left;
 white-space: nowrap;
 color:#f2f2f2;
+}
+#setting_main .top_arrow{
+	position: absolute;
+	top:-8px;
+	right:23px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 14px solid #53565d;
 }

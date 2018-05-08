@@ -1,39 +1,61 @@
 import React from 'react';
 import axios from 'axios';
-import './popular.css';
+import './Images.css';
 import {Link} from 'react-router-dom';
 import Loader from 'react-loader';
 
-const url = 'https://api.imgur.com/3/gallery/hot/viral/0?showViral=true&client_id=5d692219f4e58cd';
-export default class Popular extends React.Component {
+export default class Images extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             popular: [],
+        
             loaded: false
         }
+}
+        componentWillMount()
+        {  
+
+ 
+        }
+    
+
+    componentDidMount()
+     {
+        
     }
-    componentDidMount() {
-        axios.get(url).then(response => {
+        componentWillReceiveProps(nextProps){
+
+            axios.get(nextProps.url).then(response => {
             this.setState({
                     popular: response.data.data,
                     loaded: true
                 });
         })
-    }
+        }
 
     render() {
         var options = {
             color: "orange"
         }
+        if(!this.state.popular){
+            return null;
+        }
+function endsWithAny(suffixes, string) {
+    return suffixes.some(function (suffix) {
+        return string.endsWith(suffix);
+    });
+}
 
+        
             var result = this.state.popular.map((el, id) => {
-                
+              
                 return (
+
                     <div id="grid_column" key={id}>
                     <Link to={`/gallery/${el.id}`} >
                             <div className="post_item_media">
-                                <img src={el.images?el.images[0].link: null}  alt=" "/>
+                                <img src={el.images?el.images[0].link:null}  alt=" "/>
                             </div>
                             
                             <div id="post-item-title_wrap">
@@ -61,7 +83,7 @@ export default class Popular extends React.Component {
                     </div>
                 )
             
-           
+          
             });
         
 

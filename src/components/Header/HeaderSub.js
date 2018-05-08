@@ -39,7 +39,13 @@ axios({
 <div className="inner_blog">
 <div className="logo_head">
                    <div className="logo_main">
-                   <NavLink to="/"><img src="https://s.imgur.com/desktop-assets/desktop-assets/Navbar-logo.bcf646386406b43008da913e901b916d.svg" alt="" /></NavLink><a href="" onClick={this.click} className="dropbtn"><i className="fas fa-caret-down"></i></a></div>
+                   <NavLink to="/">
+                   <img src="https://s.imgur.com/desktop-assets/desktop-assets/Navbar-logo.bcf646386406b43008da913e901b916d.svg" alt="" /></NavLink>
+                   <a href="" onClick={this.click} className="dropbtn">&#x2304;
+                   </a>
+
+
+                   </div>
 <div className="btn_newpost">
                         <img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-new-post.e31d38c8dcf98b5c9ce5483756923188.svg" alt="" />
                 <span>New post</span>        
@@ -61,7 +67,8 @@ axios({
 </div>
 </div>
 </div>
-<div style={{position:'fixed',left:'120px',zIndex:'1'}}>{this.state.click?<Content/>:null}</div>
+<div id="icon_dropdown">{this.state.click?<Content/>:null}</div>
+
 <div id="account" style={{position:'fixed',right:'250px',zIndex:'1',color:'#fff'}}></div>
 
 </div>

@@ -25,10 +25,15 @@ export default class Header extends React.Component {
                     <div className="header_right">
                     <div className="right_wrapper">                   
                          <div className="header_icon">
+                
                     <a href="">
                     <img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-leaderboard.99437df2b52eceb16428afa3c5ae40c1.svg" alt="" /></a>
+      
                         <a href=""><img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-chat.951724718c8a2113148427d8aaba480a.svg" alt="" /></a>
+                        
+                        
                         <a href=""><img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-notifications.6a14dca2fac0255d147c87f73d2ceed3.svg" alt="" /></a>
+                        
                         </div>
                      <div className="avatar_header">
                         <Account/>

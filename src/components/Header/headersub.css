@@ -21,6 +21,21 @@ align-items: center;
 .logo_main a img{
 	width:80px;
 	vertical-align: middle;
+
+}
+.logo_main .dropbtn{
+	width: 10px;
+	height: 10px;
+	padding: 0px 3px 3px 3px;
+	outline: none;
+	color:#efefef;
+	margin:0px 0px 0px 10px; 
+	box-sizing: border-box;
+}
+.logo_main .dropbtn:hover{
+background-color:#50545c;
+border-radius: 50%;
+
 }
 .logo_head .btn_newpost{
 	background-color: #1bb76e;
@@ -49,7 +64,9 @@ box-sizing: border-box;
 	min-width: 140px;
 	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	    border-radius: 3px;
+	    margin-left: 10px;
 }
+
 .drop_down a{
 	text-decoration: none;
 	color:#121211;
@@ -69,7 +86,7 @@ font-size:12px;
 }
 .fas,.far{
 	color:#f2f2f2;
-	margin-right: 7px;
+	margin-right: 30px;
 }
 .right_head a{
 	text-decoration: none;
@@ -105,4 +122,8 @@ height: 200px;
 .dropurl li .a{
 		color:#585858;
 		padding-right: 10px;
+}
+#icon_dropdown{
+	position:relative;
+	z-index: 1000;
 }

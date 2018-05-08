@@ -1,57 +1,65 @@
 import React from 'react';
-import Popular from './Gallery/popular/Popular';
-import New from './Gallery/newest/Newest';
+import Images from './Gallery/Images/Images.js';
 import Tags from './tag/Tags';
 import Header from './Header/Header';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 import '../index.css';
 const img = 'https://s.imgur.com/desktop-assets/desktop-assets/bg-home-2.f1df058d8494e2f402781cc93a7f4003.png';
-
+const options = [
+  'popular', 'newest', 'random'
+]
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            val: 'popular'
-        }
-        this.handle = this.handle.bind(this);
+    selectedOption: ''        }
     }
-    handle(e) {
-        e.preventDefault();
-        this.setState({
-            val: e.target.value
-        })
+componentDidMount(){
+this.setState({
+            val:'https://api.imgur.com/3/gallery/hot/viral/0?showViral=true&client_id=5d692219f4e58cd' 
+        });
+}
+     _onSelect=()=>{
+if(options[1]==='newest'){
+    this.setState({
+            val:'https://api.imgur.com/3/gallery/hot/time/0?showViral=true&client_id=5d692219f4e58cd' 
+        });
+}
+    else{
+        return null;
     }
+}
+     
     render() {
+
+
+       const defaultOption = options[0];
+     
         var arr=['The center of a donut is 100% fat free.','Never be bored again.','On the internet, nobody knows you"re a dog"'];
         var res=arr[Math.floor(arr.length* Math.random())];
         return (
             <div style={{ backgroundImage: `url(${img})`, height: '450px', backgroundSize: 'cover' }}>
                     <Header />
                 <div className="random-title">
-                {res}
+               <h2 style={{fontSize:'20px'}}> {res}</h2>
                 </div>
                 <div>
                     <Tags/>
-
                 </div>
                 <div className="content-wrapper">
                 <div className="content-inner">  
                     <div>
-                <select style={{}}>
-                        <option value="">MOST VIRAL</option>
-                        <option value=""></option>
-                    </select>
+                
                 </div>
                 <div>
-                <select onChange={this.handle} value={this.state.val}>
-                        <option value="popular">POPULAR</option>
-                        <option value="new" >NEWEST</option>
-                    </select>
+                <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option"/>
                 </div>
                     
 </div>
                     <div>
-                    {this.state.val === 'popular' ? (<Popular />) : (<New />)}
-
+                    {<Images url={this.state.val}/>}
+        
                     </div>
 
                 </div>

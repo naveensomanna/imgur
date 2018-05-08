@@ -4,6 +4,7 @@ import Comment from '../comment/Comment';
 import PopularSub from '../popularsub/PopularSub.js';
 import './allbum.css';
 import HeaderSub from '../../Header/HeaderSub.js';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 export default class Allbum extends React.Component {
     constructor(props) {
@@ -51,7 +52,7 @@ export default class Allbum extends React.Component {
             )   
         });
         return ( 
-        <div>
+        <div className="main_allbum_body">
         <HeaderSub/>
 
 <div className="wrapper">
@@ -59,21 +60,21 @@ export default class Allbum extends React.Component {
 
             <div className ="post_header">
 
-            <div className="title_post_container">
-           <div className="title1">
-             {this.state.allbum.title} 
+            <div className="post_title_container">
+             <h1 className="post_title">{this.state.allbum.title}</h1> 
+             
+            <div className="post_title_meta"><span>by</span><span>{this.state.allbum.account_url}</span>
+            </div> 
             </div>
-            
 
-            <p>by{this.state.allbum.account_url}</p> 
-            <p>{this.state.allbum.platform} </p> 
-            </div>
-<div className="next_post">
+<div className="next_prev">
 <div className="prev">
 
 </div>
-<a href="" className="next">Next Post</a>
-<span></span>
+<div className="btn_action">
+<div className="text">Next Post</div>
+<span className="right_arrow"></span>
+</div>
 </div>
 </div>
             <div className="post_images"> 
@@ -109,8 +110,15 @@ export default class Allbum extends React.Component {
 <Comment id={this.props.match.params.id}/> 
             </div>
             </div> 
-            <div>
-                                     <PopularSub/>
+            <div className="popular_item_list">
+            <div className="header_side_list">
+            <p>MOST VIRAL IMAGES</p>
+            <span >SORTED BY POPULARITY</span>
+            </div>
+            <Scrollbars style={{width:300,height: 350 }}>
+                                                 <PopularSub/>
+
+      </Scrollbars>
                                      </div>
 </div>
              </div>
