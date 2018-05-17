@@ -3,7 +3,7 @@ import axios from 'axios';
 import BackImg from './BackImg ';
 import './tag.css';
 import Loader from 'react-loader';
-                                        const url = 'https://api.imgur.com/3/tags?client_id=5d692219f4e58cd';
+const url = 'https://api.imgur.com/3/tags?client_id=5d692219f4e58cd';
 
 export default class Tags extends React.Component {
     constructor(props) {
@@ -28,13 +28,14 @@ export default class Tags extends React.Component {
     handleClick(e) {
         e.preventDefault();
         this.setState({
-            status: !this.state.status,
+            status: !this.state.status
         });
 
     }
     render() {
 
-        let result = this.state.tags.slice(0, 7).map((el, id) => {
+
+        let result = this.state.tags.slice(0, 6).map((el, id) => {
 
             return (
                 <div className="tag" key={id}>
@@ -50,14 +51,14 @@ export default class Tags extends React.Component {
 
             );
         })
-        let result1 = this.state.tags.slice(8, 14).map((el, id) => {
+        let result1 = this.state.tags.slice(7, 14).map((el, id) => {
             return (
-                <div href="" className="tag" >
+                <div className="tag">
                     <div className="tags_inner">
                         <div className="back_img_main">
                             <BackImg res={el.background_hash} />
                         </div>
-                                                    <TagLabel name={el.name} total_items={el.total_items} accent={el.accent}/>
+                 <TagLabel name={el.name} total_items={el.total_items} accent={el.accent}/>
 
                     </div>
                 </div>
@@ -78,8 +79,9 @@ export default class Tags extends React.Component {
                 </div>
                 <Loader loaded={this.state.loaded} options={options}>
                     <div className="trending_tags_container">
-
-                        {result}
+                    
+                    <Feature s={this.state.tags}/> {result}
+                
                         {this.state.status ? result1 : null}
                     </div>
 
@@ -105,4 +107,33 @@ return(
 )
 
     }
+}
+
+class Feature extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            taa:this.props.s
+        }
+    }
+     
+    render(){
+
+        var res=this.state.taa[Math.floor(this.state.taa.length * Math.random())];
+return(
+
+<div className="tag tagsize" >
+        
+                   <div className="tags_inner">
+                        <div className="back_img_main">
+                            <BackImg res={res.background_hash}/>
+                        </div>
+
+                            <TagLabel name={res.name} total_items={res.total_items} accent={res.accent}/>
+                    </div>
+                </div>
+)
+
+    }
+
 }

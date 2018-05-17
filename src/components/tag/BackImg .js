@@ -21,7 +21,7 @@ export default class BackImg extends React.Component {
        
         return(
             <div>
-                         <img src={this.state.img.link} alt="" id="back_img" width="127px" height="20px"/> 
+                         <img src={this.state.img.link} alt="" id="back_img" /> 
 
             </div>
         )   
