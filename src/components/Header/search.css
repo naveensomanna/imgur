@@ -1,3 +1,6 @@
+.search_section{
+    position: relative;
+}
 #search{
     Width:100%;
     height: 36px;
@@ -13,4 +16,12 @@
     font-family: 'Source Sans Pro';
 padding: 8px 35px 8px 10px;
 box-sizing: border-box;
+}
+.submit_search{
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color: transparent;
+    border:none;
+font-size: 20px;
 }

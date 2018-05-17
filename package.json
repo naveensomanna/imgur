@@ -15,6 +15,7 @@
     "react-md-spinner": "^0.2.5",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
+    "react-scrolltop-button": "^0.1.4",
     "react-select": "^1.2.1",
     "react-select-box": "^3.0.1",
     "yarn": "^1.6.0"
@@ -24,5 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-social-icons": "^3.0.0"
   }
 }

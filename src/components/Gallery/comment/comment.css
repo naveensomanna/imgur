@@ -1,3 +1,5 @@
+.main_allbum_body{
+}
 .comment_list{
 	list-style-type: none;
 	background-color: #2c2f34;
@@ -20,4 +22,8 @@ ul{
 	font-size: 11px;
 	margin-bottom: 4px;
 	color:#bbb;
+}
+.author a{
+	color:#7789ff;
+
 }

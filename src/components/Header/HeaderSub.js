@@ -43,11 +43,12 @@ axios({
                    <img src="https://s.imgur.com/desktop-assets/desktop-assets/Navbar-logo.bcf646386406b43008da913e901b916d.svg" alt="" /></NavLink>
                    <a href="" onClick={this.click} className="dropbtn">&#x2304;
                    </a>
+<div id="icon_dropdown">{this.state.click?<Content/>:null}</div>
 
 
                    </div>
 <div className="btn_newpost">
-                        <img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-new-post.e31d38c8dcf98b5c9ce5483756923188.svg" alt="" />
+                        <i className="fas fa-cloud-upload-alt"></i>
                 <span>New post</span>        
 </div>
                    <div className="">
@@ -57,9 +58,9 @@ axios({
 </div>
 <div className="right_head">
 <div>
-<i className="fas fa-search"></i>
-<i className="fas fa-comment"></i>
-<i className="far fa-bell"></i>
+<i className="fas fa-search search"></i>
+<i className="far fa-comment-dots dot"></i>
+<i className="far fa-bell bell"></i>
 </div>
 <div id="url">
 <a href="">{this.state.account.url}</a>
@@ -67,7 +68,6 @@ axios({
 </div>
 </div>
 </div>
-<div id="icon_dropdown">{this.state.click?<Content/>:null}</div>
 
 <div id="account" style={{position:'fixed',right:'250px',zIndex:'1',color:'#fff'}}></div>
 

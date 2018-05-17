@@ -58,7 +58,7 @@ if(this.state.comment[j].children.length){
 );*/
 var res=this.state.comment.map(el=>{
 	return (
-<div>
+<div >
 <li className="comment_list">
 <div className="author">
 <span style={{fontWeight: '700',marginRight:'4px'}}>{el.author}</span><span>via<a href="">{el.platform}</a></span><span style={{marginLeft:'18px'}}>{el.points}pts</span>
@@ -72,10 +72,8 @@ var res=this.state.comment.map(el=>{
 });
 
 		return(
-<div>
-<ul>{res}
-
-</ul>
+<div className="main_allbum_body">
+<ul>{res}</ul>
 </div>
 			);
 	}

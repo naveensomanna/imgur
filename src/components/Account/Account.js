@@ -38,7 +38,7 @@ this.setState({
 
 		return(
 <div id="avatar">
-<a href="" onClick={this.handleClick} style={{display:'block',position:'relative'}}><img src={this.state.account.avatar} alt=" "/></a>
+<a href="" onClick={this.handleClick} style={{display:'block',position:'relative'}}><img className="account_img" src={this.state.account.avatar} alt=" "/></a>
 <div>{this.state.show?<Settings/>:null}</div>
 </div>
 			)
@@ -47,17 +47,19 @@ this.setState({
 
 const Settings=()=>{
 return(
-<div id="setting_main">
-<ul>
-<li><a href="">Posts</a></li>
-<li><a href="">Favorites</a></li>
-<li><a href="">Comments</a></li>
-<li><a href="">About</a></li>
-<li><a href="">Images</a></li>
-<li><a href="">Albums</a></li>
-<li><a href="">Settings</a></li>
-<li><a href="">Sign Out</a></li>
-</ul>
+<div id="dropdown_list">
+<div className="dropdown_option_group">
+<a href="" className="dropdown_option">Posts</a>
+<a href="" className="dropdown_option">Favorites</a>
+<a href="" className="dropdown_option">Comments</a>
+<a href="" className="dropdown_option">About</a>
+<a href="" className="dropdown_option">Images</a>
+<a href="" className="dropdown_option">Albums</a>
+</div>
+<div className="dropdown_option_group dropdown_option_group_footer">
+<a href="" className="dropdown_option"><img  className="settings" src="https://s.imgur.com/desktop-assets/desktop-assets/icon-settings.7399c1dde71a66bb11f5674b02f8a5f1.svg" alt=""/><span>Settings</span></a>
+<a href="" className="dropdown_option"><img className="sign-out" src="https://s.imgur.com/desktop-assets/desktop-assets/icon-sign-out.21a5a43e3814a8148874cef50962eedf.svg" alt=""/><span>Sign Out</span></a>
+</div>
 <div className="top_arrow"></div>
 </div>
 
