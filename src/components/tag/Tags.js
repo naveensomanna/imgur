@@ -33,7 +33,8 @@ export default class Tags extends React.Component {
 
     }
     render() {
-        let result = this.state.tags.slice(0, 8).map((el, id) => {
+
+        let result = this.state.tags.slice(0, 7).map((el, id) => {
 
             return (
                 <div className="tag" key={id}>
@@ -43,26 +44,21 @@ export default class Tags extends React.Component {
                             <BackImg res={el.background_hash} />
                         </div>
 
-                        <div className="tag_label">
-                            <div className="tag_name">{el.name}</div>
-                            <div className="tag_post">{el.total_items}<span style={{ marginLeft: '2px' }}>Posts</span></div>
-                        </div>
+                            <TagLabel name={el.name} total_items={el.total_items} accent={el.accent}/>
                     </div>
                 </div>
 
             );
         })
-        let result1 = this.state.tags.slice(7, 15).map((el, id) => {
+        let result1 = this.state.tags.slice(8, 14).map((el, id) => {
             return (
                 <div href="" className="tag" >
                     <div className="tags_inner">
                         <div className="back_img_main">
                             <BackImg res={el.background_hash} />
                         </div>
-                        <div className="tag_label">
-                            <div className="tag_name"><span>{el.name}</span></div>
-                            <div className="tag_post"><span>{el.total_items}</span><span>Posts</span></div>
-                        </div>
+                                                    <TagLabel name={el.name} total_items={el.total_items} accent={el.accent}/>
+
                     </div>
                 </div>
             );
@@ -95,3 +91,18 @@ export default class Tags extends React.Component {
 
 
 
+class TagLabel extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+
+return(
+<div className="tag_label" style={{backgroundColor:`#${this.props.accent}`}}>
+<div className="tag_name">{this.props.name}</div>
+                            <div className="tag_post">{this.props.total_items}<span style={{ marginLeft: '2px' }}>Posts</span></div>
+</div>
+)
+
+    }
+}

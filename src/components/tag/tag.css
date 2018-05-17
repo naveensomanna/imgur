@@ -27,7 +27,6 @@ border-top-right-radius: 3px;
 }
 .tag .tag_label{
     width:100%;
-    background-color:rgb(4,141,142);
     color:#fff;
     padding:12px;
     box-sizing: border-box;
