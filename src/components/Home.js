@@ -9,6 +9,9 @@ const img = 'https://s.imgur.com/desktop-assets/desktop-assets/bg-home-2.f1df058
 const options = [
   'popular', 'newest', 'random'
 ]
+const option = [
+    'most viral', 'user submitted'
+  ]
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
@@ -33,8 +36,8 @@ if(options[1]==='newest'){
      
     render() {
 
-
-       const defaultOption = options[0];
+const defaultOption=option[0];
+       const defaultOptions = options[0];
      
         var arr=['The center of a donut is 100% fat free.','Never be bored again.','On the internet, nobody knows you"re a dog"'];
         var res=arr[Math.floor(arr.length* Math.random())];
@@ -50,10 +53,11 @@ if(options[1]==='newest'){
                 <div className="content-wrapper">
                 <div className="content-inner">  
                     <div>
-                
+                    <Dropdown options={option} onChange={this._onSelect} value={defaultOption}/>
+
                 </div>
                 <div>
-                <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option"/>
+                <Dropdown options={options} onChange={this._onSelect} value={defaultOptions}/>
                 </div>
                     
 </div>

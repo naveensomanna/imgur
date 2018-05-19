@@ -3,6 +3,7 @@ import axios from 'axios';
 import './Images.css';
 import {Link} from 'react-router-dom';
 import Loader from 'react-loader';
+import InfiniteScroll from 'react-infinite-scroller';
 
 export default class Images extends React.Component {
     constructor(props) {
@@ -13,17 +14,7 @@ export default class Images extends React.Component {
             loaded: false
         }
 }
-        componentWillMount()
-        {  
-
- 
-        }
-    
-
-    componentDidMount()
-     {
-        
-    }
+       
         componentWillReceiveProps(nextProps){
 
             axios.get(nextProps.url).then(response => {
@@ -41,11 +32,7 @@ export default class Images extends React.Component {
         if(!this.state.popular){
             return null;
         }
-function endsWithAny(suffixes, string) {
-    return suffixes.some(function (suffix) {
-        return string.endsWith(suffix);
-    });
-}
+
 
         
             var result = this.state.popular.map((el, id) => {
@@ -90,7 +77,8 @@ function endsWithAny(suffixes, string) {
         return (
             <div className="home_grid">
                 <Loader loaded={this.state.loaded} options={options}>
-                    {result}
+         
+   {result} 
                 </Loader>
             </div>
         )

@@ -1,17 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
 .random-title{
 	text-align: center;
 	 margin-top: 12px;
 	  min-height: 34px;
 	   color: #aed8ea;
-	    letter-spacing: .6px; 
-	    fonts-size: 20px;
-	 font-weight: 600;
-}
+	    letter-spacing: 1.6px; 
+	    font-size: 24px;
+	 font-weight: bold;
+	 font-family: 'Anton', sans-serif;
+	}
 .content-wrapper{
 	position: relative;
 	 top: 50px;
@@ -23,15 +23,35 @@ display:flex;
 justify-content:space-between;
 margin-bottom:10px;
 }
-select{
-	border:none;
-	background:none;
-	color:transparent;
-	text-shadow:0 0 0 #babec2;
-	font-weight:600;
-	cursor:pointer;
-	outline:none;
+/*select*/
+.content-wrapper .Dropdown-control{
+	background-color:transparent !important;
+	border: none;
+	color:#babec4;;
+	font-family: 'Ralway';
+	font-size: 17px;
+	position: relative;
+	box-sizing: border-box;	
+	text-transform: uppercase;
+padding: 0px 24px  0px;
+font-weight: 600;
+letter-spacing: 1.5px;
 }
-select option{
-	background-color: none;
+.Dropdown-menu{
+	border-radius: 6px;
+	background-color: #53565d !important;
+	border:none !important;
+	padding-top: 5px;
+	padding-bottom: 13px;
+}
+ .is-selected{
+	color:white !important;
+	background-color: transparent !important;
+}
+.Dropdown-option:hover{
+	background-color:hsla(0,0%,80%,.29) !important;
+}
+.Dropdown-option{
+	padding-left: 18px !important;
+    padding-right: 26px !important;
 }

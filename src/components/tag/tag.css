@@ -92,13 +92,19 @@ padding: 0 6px;
  opacity: .7;
  position: relative;
 }
-  .trending h3{
-font-size: 14px;
-font-family: 'Lucida Console", Monaco, monospace'
+.trendingtags_label {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Raleway';
 }
 .trendingtags-header .label_toggle a {
 text-decoration: none;
 color:#fff;
 outline: none;
 position: relative;
+font-size: 16px;
+font-weight: 700;
+font-family: 'Raleway';
+line-height: 1;
+
 }
