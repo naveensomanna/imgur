@@ -33,16 +33,17 @@ export default class Images extends React.Component {
             return null;
         }
 
+const filte=this.state.popular.filter(el=>{
+    return el.images&&el.images[0].link.length>1?el.images[0].link:null;
+});
 
-        
-            var result = this.state.popular.map((el, id) => {
-              
+            var result = filte.map((el, id) => {
                 return (
 
                     <div id="grid_column" key={id}>
                     <Link to={`/gallery/${el.id}`} >
                             <div className="post_item_media">
-                                <img src={el.images?el.images[0].link:null}  alt=" "/>
+                                {el.images&&el.images[0].link.substr(el.images[0].link.length-1)==='4'?<Vid sr={el.images?el.images[0].link:null}/>:<Img sr={el.images?el.images[0].link:null}/>}
                             </div>
                             
                             <div id="post-item-title_wrap">
@@ -75,13 +76,25 @@ export default class Images extends React.Component {
         
 
         return (
-            <div className="home_grid">
-                <Loader loaded={this.state.loaded} options={options}>
+                <div className="home_grid">
          
    {result} 
-                </Loader>
-            </div>
+                </div>
         )
     }
 }
 
+const Img=(props)=>{
+    return (
+<img src={props.sr} alt=""/>
+    )
+}
+const Vid=(props)=>{
+    return(
+        <div>
+        <video width="270" height="300" controls>
+        <source src={props.sr} type="video/mp4"/>
+      </video>
+      </div>
+    )
+}

@@ -11,7 +11,7 @@ export default class Header extends React.Component {
                 <div className="header_main">
                     <div className="header_name">
                         <div className="header_logo">
-                    <NavLink to="/"><img src="https://s.imgur.com/desktop-assets/desktop-assets/Navbar-logo.bcf646386406b43008da913e901b916d.svg" alt="" /></NavLink>
+                    <NavLink exact to="/home"><img src="https://s.imgur.com/desktop-assets/desktop-assets/Navbar-logo.bcf646386406b43008da913e901b916d.svg" alt="" /></NavLink>
                         </div>
 
                         <a href="" className="ButtonLink" title="New post">

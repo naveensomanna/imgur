@@ -2,11 +2,14 @@
     max-width: 1110px;
 margin: 0 auto;
 position: relative;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
 }
 #grid_column{
     max-width: 270px;
-    height: auto;
-float: left;
+   max-height: 300px;
+
 }
 #grid_column .post_item_media{
     position: relative;
@@ -29,11 +32,12 @@ text-decoration: none;
 }
 #post-item-title_wrap .post_title{
 width:80%;
-min-height: 35px;
    color: #fff;
 box-sizing: border-box;
 position: relative;
 overflow: none;
+height: 40px;
+overflow: hidden;
 }
 .post_title p{
     text-align: left;
