@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 3px !important;
-    width:127px;
+    width:122px;
     height: 160px;
     text-decoration: none;
     margin: 12px 6px;
@@ -66,7 +66,7 @@ font-size: 12px;
 .trending{
     display: flex;
     flex-direction: column;
-    max-width: 1124px;
+    width: 1000px;
     margin: 0 auto;
     align-items: center;
 position: relative;
@@ -79,7 +79,7 @@ position: relative;
     position: relative;
 }
 .trendingtags-header{
-    width:1112px;
+    width:800px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -106,5 +106,23 @@ font-size: 16px;
 font-weight: 700;
 font-family: 'Raleway';
 line-height: 1;
+
+}
+/*responsive*/
+@media screen and (min-width:900px){
+    .trending{
+width:65%;
+    }
+    .trendingtags-header{
+        width:100%;
+    }
+    .trending .trending_tags_container{
+    width:100%;   
+    }
+}
+@media screen and (max-width:600px){
+.trending{
+    
+}
 
 }

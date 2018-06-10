@@ -130,4 +130,24 @@
     font-size: 13px;
     opacity: 0.7;
   }
+  /*responsive*/
+  @media (max-width: 768px) {
+    .login-screen {
+      width: 700px;
+      margin: -225px 0 0 -350px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .login-screen {
+      width: 300px;
+      margin: -225px 0 0 -150px;
+    }
+    .login-screen .right-item {
+      display: none;
+    }
+    .login-screen .left-item {
+      width: 100%;
+    }
+  }
   

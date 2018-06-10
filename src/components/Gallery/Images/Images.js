@@ -52,10 +52,10 @@ const filte=this.state.popular.filter(el=>{
                                 </div>
                                 <div className="post_ups_dws">
                                     <div>
-                                        <p className="inner_icons"><i className="fas fa-long-arrow-alt-up"></i>{el.ups}</p>
+                                        <p className="inner_icons"><i class="fas fa-arrow-up"></i>{el.ups}</p>
                                     </div>
                                     <div>
-                                        <p className="inner_icons"><i className="fas fa-long-arrow-alt-down"></i>{el.downs}</p>
+                                        <p className="inner_icons"><i class="fas fa-arrow-up"></i>{el.downs}</p>
                                     </div>
                                     <div>
                                         <p className="inner_icons"><i className="fas fa-comment-alt"></i>{el.comment_count}</p>
@@ -92,7 +92,7 @@ const Img=(props)=>{
 const Vid=(props)=>{
     return(
         <div>
-        <video width="270" height="300" controls>
+        <video  controls>
         <source src={props.sr} type="video/mp4"/>
       </video>
       </div>

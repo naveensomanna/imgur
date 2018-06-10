@@ -47,7 +47,7 @@ const defaultOption=option[0];
                 <div className="random-title">
                <h2 style={{fontSize:'20px'}}> {res}</h2>
                 </div>
-                <div>
+                <div className="tag-container">
                     <Tags/>
                 </div>
                 <div className="content-wrapper">

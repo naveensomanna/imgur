@@ -15,8 +15,9 @@ body {
 .content-wrapper{
 	position: relative;
 	 top: 50px;
-	 width:1212px;
+	 
 	 margin:0 auto;
+	 
 }
 .content-wrapper .content-inner{
 display:flex;
@@ -54,4 +55,18 @@ letter-spacing: 1.5px;
 .Dropdown-option{
 	padding-left: 18px !important;
     padding-right: 26px !important;
+}
+.Dropdown-arrow {
+	position: absolute;
+    right: 10px;
+    top: 10px !important;
+}
+/*responsive*/
+@media screen and (min-width: 900px){
+	.content-wrapper{
+		width:90%;
+	}
+	.tag-container{
+	width:100%;
+	}
 }

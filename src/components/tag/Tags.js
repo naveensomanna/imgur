@@ -38,7 +38,7 @@ export default class Tags extends React.Component {
     render() {
 
 
-        let result = this.state.tags.slice(0, 6).map((el, id) => {
+        let result = this.state.tags.slice(0, 7).map((el, id) => {
 
             return (
                 <div className="tag" key={id}>
@@ -54,7 +54,7 @@ export default class Tags extends React.Component {
 
             );
         })
-        let result1 = this.state.tags.slice(7, 31).map((el, id) => {
+        let result1 = this.state.tags.slice(7, 34).map((el, id) => {
             return (
                 <div className="tag">
                     <div className="tags_inner">
