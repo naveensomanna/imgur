@@ -15,7 +15,9 @@
     position: relative;
     box-sizing: border-box;
 }
-
+#grid_column a{
+    text-decoration: none;
+}
 #grid_column .post_item_media {
     position: relative;
     width: 100%;

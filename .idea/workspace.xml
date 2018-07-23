@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3891508-21e7-4f66-83a9-5079a387a162" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Gallery/allbum/Allbum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gallery/allbum/Allbum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Gallery/Images/Images.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gallery/Images/Images.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,8 +54,8 @@
       <file leaf-file-name="Images.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Gallery/Images/Images.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="78" column="97" lean-forward="true" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="97" />
+            <state relative-caret-position="442">
+              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Images.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Images.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Gallery/Images/Images.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-364">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="468">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -105,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Allbum.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Allbum.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Gallery/allbum/Allbum.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="166" column="25" selection-start-line="166" selection-start-column="25" selection-end-line="166" selection-end-column="25" />
+            <state relative-caret-position="286">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -139,13 +139,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/components/Home.js" />
         <option value="$PROJECT_DIR$/src/components/Account/Account.js" />
-        <option value="$PROJECT_DIR$/src/components/Gallery/Images/Images.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/Gallery/Images/Images.css" />
         <option value="$PROJECT_DIR$/src/components/Header/HeaderSub.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/Gallery/popularsub/PopularSub.js" />
         <option value="$PROJECT_DIR$/src/components/Gallery/allbum/Allbum.js" />
+        <option value="$PROJECT_DIR$/src/components/Gallery/Images/Images.js" />
+        <option value="$PROJECT_DIR$/src/components/Gallery/Images/Images.css" />
       </list>
     </option>
   </component>
@@ -202,14 +202,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Gallery" type="462c0819:PsiDirectoryNode" />
-              <item name="allbum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="imgur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imgur" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Gallery" type="462c0819:PsiDirectoryNode" />
               <item name="Images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -258,12 +250,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532313551934</updated>
-      <workItem from="1532313553063" duration="4634000" />
+      <workItem from="1532313553063" duration="4870000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4634000" />
+    <option name="totallyTimeSpent" value="4870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -316,13 +308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Gallery/Images/Images.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-364">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Header/HeaderSub.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
@@ -370,23 +355,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Gallery/Images/Images.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Gallery/allbum/Allbum.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="78" column="97" lean-forward="true" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="97" />
+        <state relative-caret-position="286">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Gallery/allbum/Allbum.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Gallery/Images/Images.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="166" column="25" selection-start-line="166" selection-start-column="25" selection-end-line="166" selection-end-column="25" />
+        <state relative-caret-position="442">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Gallery/Images/Images.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
         </state>
       </provider>
     </entry>
