@@ -20,7 +20,7 @@ export default class Feature extends React.Component{
         })
     }
     render(){
-        var res,ar=[],a={};
+        var res,ar=[];
     ar=this.state.taa.slice(7,8);
 
 res=ar.map((el,id)=>{

@@ -24,9 +24,7 @@ export default class Images extends React.Component {
         }
 
     render() {
-        var options = {
-            color: "orange"
-        }
+       
         if(!this.state.popular){
             return null;
         }

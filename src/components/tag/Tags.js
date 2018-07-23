@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import BackImg from './BackImg ';
 import './tag.css';
-import Loader from 'react-loader';
 import Feature from './Feature.js';
 import TagLabel from './TagLabel.js';
 
@@ -67,9 +66,7 @@ export default class Tags extends React.Component {
                 </div>
             );
         })
-        var options = {
-            color: "orange"
-        }
+      
         return (
             <div className="trending">
                 <div className="trendingtags-header">
