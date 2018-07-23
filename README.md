@@ -1,9 +1,8 @@
 
 # imgur 
-Discover Movies 
-<img src="src/screenshots/Screenshot%20desktop.png" width="900" height="700"/>
-<img src="src/screenshots/Screenshot%20mobile.png" width="400" height="600"/>
-<img src="src/screenshots/Screenshot%20mobile1.png" width="400" height="600"/>
+Discover images & videos 
+<img src="src/screenshots/Screenshot.png" width="900" height="700"/>
+<img src="src/screenshots/Screenshot1.png" width="900" height="700"/>
 
 
 ### What's included
