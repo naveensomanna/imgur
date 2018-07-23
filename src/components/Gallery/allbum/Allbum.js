@@ -8,12 +8,14 @@ import {Scrollbars} from 'react-custom-scrollbars';
 import {Button} from 'react-bootstrap';
 import AllbumFooter from './AllbumFooter.js';
 import './allbumfooter.css';
+import Loader from 'react-loader';
 
 export default class Allbum extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            allbum: []
+            allbum: [],
+            loaded:false
         }
     }
 
@@ -27,7 +29,8 @@ export default class Allbum extends React.Component {
             }
         }).then(response => {
             this.setState({
-                allbum: response.data.data
+                allbum: response.data.data,
+                loaded:true
             });
         }).catch(function (error) {
             console.log(error);
@@ -59,7 +62,7 @@ export default class Allbum extends React.Component {
         return (
             <div className="main_allbum_body">
                 <HeaderSub/>
-
+                <Loader loaded={this.state.loaded} color="blue">
                 <div className="wrapper">
                     <div className="post_container">
 
@@ -161,7 +164,7 @@ export default class Allbum extends React.Component {
 
 
                 </div>
-
+                </Loader>
             </div>
 
         )
