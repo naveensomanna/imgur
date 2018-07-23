@@ -19,8 +19,10 @@ export default class PopularSub extends React.Component {
     }
 
     render() {
-
-            var result = this.state.pop.map((el, id) => {
+        const filtr=this.state.pop.filter(el=>{
+            return el.images&&el.images[0].link.length>1?el.images[0].link:null;
+        });
+            var result = filtr.map((el, id) => {
                 
                 return (
                     <div className="gridsub_column">

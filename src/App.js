@@ -3,7 +3,6 @@ import Home from './components/Home';
 import Allbum from './components/Gallery/allbum/Allbum';
 import User from './components/user/User';
 import ScrollTop from "react-scrolltop-button";
-import Login from './components/Login/Login';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 
 class App extends Component {
@@ -13,8 +12,7 @@ class App extends Component {
 
         <Router>
         <div>
-        <Route exact path="/" component={Login}></Route>
-<Route exact  path="/home" component={Home}></Route>
+<Route exact  path="/" component={Home}></Route>
 <Route path="/gallery/:id" component={Allbum}></Route>
 <Route path="/user" component={User}></Route>
 <ScrollTop text="TAKE ME UP"   style={{ backgroundColor: "#53565f",color:'#fff',border:'none',fontSize:'13px' }}/>

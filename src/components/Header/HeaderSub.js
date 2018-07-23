@@ -39,7 +39,7 @@ axios({
 <div className="inner_blog">
 <div className="logo_head">
                    <div className="logo_main">
-                   <NavLink to="/home">
+                   <NavLink to="/">
                    <img src="https://s.imgur.com/desktop-assets/desktop-assets/Navbar-logo.bcf646386406b43008da913e901b916d.svg" alt="" /></NavLink>
                    <a href="" onClick={this.click} className="dropbtn">&#x2304;
                    </a>

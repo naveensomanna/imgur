@@ -3,14 +3,12 @@ import axios from 'axios';
 import './Images.css';
 import {Link} from 'react-router-dom';
 import Loader from 'react-loader';
-import InfiniteScroll from 'react-infinite-scroller';
 
 export default class Images extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             popular: [],
-        
             loaded: false
         }
 }
@@ -77,8 +75,8 @@ const filte=this.state.popular.filter(el=>{
 
         return (
                 <div className="home_grid">
-         
-   {result} 
+
+                    {this.state.loaded?result: <Loader loaded={this.state.loaded} color="blue"/>}
                 </div>
         )
     }
